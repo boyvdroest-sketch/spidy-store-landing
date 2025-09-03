@@ -1,0 +1,218 @@
+/* Reset and base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+    color: #222;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(90deg, #6366f1 0%, #06b6d4 100%);
+    color: #fff;
+    padding: 2rem 1rem 1rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+    border-radius: 0 0 2rem 2rem;
+    animation: fadeInDown 1s;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.promo {
+    background: #fff;
+    margin: 2rem auto 1rem auto;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(99,102,241,0.07);
+    max-width: 500px;
+    text-align: center;
+    animation: fadeIn 1.2s;
+}
+
+.promo h2 {
+    color: #6366f1;
+    margin-bottom: 0.5rem;
+}
+
+.discount {
+    color: #06b6d4;
+    font-weight: bold;
+    font-size: 1.5rem;
+    animation: pulse 1.5s infinite;
+}
+
+.products {
+    margin: 2rem auto;
+    max-width: 900px;
+    background: #f1f5f9;
+    border-radius: 1rem;
+    box-shadow: 0 2px 12px rgba(6,182,212,0.07);
+    padding: 2rem;
+    animation: fadeInUp 1.2s;
+}
+
+.products h2 {
+    color: #06b6d4;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.products ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.products li {
+    background: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #6366f1;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    cursor: pointer;
+    min-width: 180px;
+    max-width: 220px;
+    text-align: center;
+    animation: popIn 0.8s;
+    position: relative;
+    overflow: hidden;
+}
+
+.products li:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 16px rgba(6,182,212,0.15);
+    background: #e0e7ff;
+}
+
+.products img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 0.7rem;
+    margin-bottom: 0.7rem;
+    box-shadow: 0 2px 8px rgba(99,102,241,0.08);
+    transition: transform 0.3s;
+}
+
+.products li:hover img {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+.products h3 {
+    margin: 0.5rem 0 0.3rem 0;
+    font-size: 1.2rem;
+    color: #6366f1;
+}
+
+.products p {
+    font-size: 1rem;
+    color: #222;
+    margin-bottom: 0.5rem;
+}
+
+.cta {
+    margin: 2rem auto;
+    max-width: 500px;
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 24px rgba(6,182,212,0.07);
+    padding: 2rem;
+    text-align: center;
+    animation: fadeIn 1.5s;
+}
+
+.cta h2 {
+    color: #6366f1;
+    margin-bottom: 0.5rem;
+}
+
+.join-button, .chat-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 2rem;
+    background: linear-gradient(90deg, #6366f1 0%, #06b6d4 100%);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 2rem;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(99,102,241,0.12);
+    transition: background 0.3s, transform 0.2s;
+    animation: bounceIn 1.2s;
+}
+
+.join-button:hover, .chat-button:hover {
+    background: linear-gradient(90deg, #06b6d4 0%, #6366f1 100%);
+    transform: scale(1.07);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #f1f5f9;
+    color: #6366f1;
+    font-size: 1rem;
+    margin-top: 2rem;
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 -2px 8px rgba(99,102,241,0.05);
+    animation: fadeInUp 1.5s;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeIn {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+@keyframes pulse {
+    0%, 100% { color: #06b6d4; }
+    50% { color: #6366f1; }
+}
+@keyframes popIn {
+    0% { opacity: 0; transform: scale(0.8);}
+    100% { opacity: 1; transform: scale(1);}
+}
+@keyframes bounceIn {
+    0% { transform: scale(0.8);}
+    60% { transform: scale(1.1);}
+    100% { transform: scale(1);}
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .products ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .products, .promo, .cta {
+        padding: 1rem;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+}
